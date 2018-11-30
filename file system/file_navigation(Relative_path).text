@@ -1,0 +1,50 @@
+maazil@maazil-virtual-machine:~$ pwd           // full form is " print working directory" Show the current directory for absult path.
+/hom e/maazil
+
+maazil@maazil-virtual-machine:~$ ls                        // full form is " list " show all the file and folder in the curent directory .
+Desktop    Downloads         Music     Public  Templates
+Documents  examples.desktop  Pictures  snap    Videos
+
+maazil@maazil-virtual-machine:~$ cd cd Desktop     // full form is " change directory " Go home directory to Desktop .
+maazil@maazil-virtual-machine:~/Desktop$ pwd
+/home/maazil/Desktop
+
+maazil@maazil-virtual-machine:~$ cd cd ./Desktop     // full form is " change directory " Go home directory to Desktop .
+maazil@maazil-virtual-machine:~/Desktop$ pwd
+/home/maazil/Desktop
+
+maazil@maazil-virtual-machine:~/Desktop$ cd /             //  Go to root directory 
+maazil@maazil-virtual-machine:/$ pwd
+/
+maazil@maazil-virtual-machine:/$ ls                                           // files and folders in the root directory
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swapfile  usr  vmlinuz.old
+
+
+maazil@maazil-virtual-machine:/$ cd ~                          //  Go to home directory
+maazil@maazil-virtual-machine:~$ pwd
+/home/maazil
+maazil@maazil-virtual-machine:~$ ls
+Desktop    Downloads         Music     Public  Templates
+Documents  examples.desktop  Pictures  snap    Videos
+
+maazil@maazil-virtual-machine:/$ cd ~                          // home directory 
+maazil@maazil-virtual-machine:~$ pwd
+/home/maazil
+maazil@maazil-virtual-machine:~$ cd ..                          //  cd .. is represent the parent directory
+maazil@maazil-virtual-machine:/home$ pwd
+/home
+maazil@maazil-virtual-machine:/home$ cd ..
+maazil@maazil-virtual-machine:/$ pwd
+/
+
+maazil@maazil-virtual-machine:/$ cd home                       // go to home directory 
+maazil@maazil-virtual-machine:/home$ cd maazil
+maazil@maazil-virtual-machine:~$ pwd
+/home/maazil
+maazil@maazil-virtual-machine:/$ cd /                           // go to root directory
+maazil@maazil-virtual-machine:/$ pwd
+/                                       
+maazil@maazil-virtual-machine:~$ cd -                      // go to previous directory ( cd dash sign )
+/home/maazil
