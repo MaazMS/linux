@@ -77,3 +77,6 @@ m2  z2
 maazil@maazil-virtual-machine:/$ cd  ~
 maazil@maazil-virtual-machine:~$ ls ./Desktop
 m1  z1
+maazil@maazil-virtual-machine:~$ ls Desktop
+m1  z1
+
