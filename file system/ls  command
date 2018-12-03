@@ -1,0 +1,28 @@
+maazil@maazil-virtual-machine:~$ ls /
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swapfile  usr  vmlinuz.old
+
+maazil@maazil-virtual-machine:~$ ls ~
+Desktop    Downloads         Music     Public  Templates
+Documents  examples.desktop  Pictures  snap    Videos
+
+maazil@maazil-virtual-machine:~$ cd Desktop/m1
+maazil@maazil-virtual-machine:~/Desktop/m1$ pwd
+/home/maazil/Desktop/m1
+
+maazil@maazil-virtual-machine:~/Desktop/m1$ ls
+m2  z2
+maazil@maazil-virtual-machine:~/Desktop/m1$ ls ..
+m1  z1
+
+maazil@maazil-virtual-machine:/$ cd /
+maazil@maazil-virtual-machine:/$ pwd
+/                                    
+maazil@maazil-virtual-machine:/$ ls /home/maazil/Desktop/m1
+m2  z2
+maazil@maazil-virtual-machine:/$ cd  ~
+maazil@maazil-virtual-machine:~$ ls ./Desktop
+m1  z1
+maazil@maazil-virtual-machine:~$ ls Desktop
+m1  z1
