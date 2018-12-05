@@ -1,0 +1,51 @@
+maazil@maazil-virtual-machine:~$ cd Desktop/                        
+maazil@maazil-virtual-machine:~/Desktop$ ls
+file1  m1                                                                  // current directory contant
+
+maazil@maazil-virtual-machine:~/Desktop$ ln file hardlink1                 // create hardlink1 file  of file1 
+maazil@maazil-virtual-machine:~/Desktop$ ln file hardlink2                 // create hardlink2 file  of file1
+maazil@maazil-virtual-machine:~/Desktop$ ln hardlink1 copyhardlink1        // create hardlink for hardlink file 
+
+maazil@maazil-virtual-machine:~/Desktop$ ls -l                             // 22 byte size of file.The hardlink file and orignal file has same size
+total 16                                                  
+-rw-rw-r-- 6 maazil maazil   22 Dec  4 22:04 file
+-rw-rw-r-- 6 maazil maazil   22 Dec  4 22:04 hardlink1
+-rw-rw-r-- 6 maazil maazil   22 Dec  4 22:04 hardlink2
+drwxr-xr-x 4 maazil maazil 4096 Dec  1 00:06 m1
+
+Note : what is total 16 ?
+
+maazil@maazil-virtual-machine:~/Desktop$ ls -i
+2493453 file  2493453 hardlink1  2493453 hardlink2  3018345 m1         // The hardlink file and orignal file has same inode number i.e 2493453 .
+
+Softlink
+
+maazil@maazil-virtual-machine:~/Desktop$ ln -s hardlink2 softlink        // create softlink of hardlink file anf also without hardlink file and 
+maazil@maazil-virtual-machine:~/Desktop$ ln -s softlink  copysoftlink
+maazil@maazil-virtual-machine:~/Desktop$ ls -i
+2493453 copyhardlink1  2493453 hardlink2  3018345 m1  2493427 softlink
+2493382  copysoftlink 
+maazil@maazil-virtual-machine:~/Desktop$ ls -l
+total 12
+-rw-rw-r-- 7 maazil maazil   22 Dec  4 22:04 copyhardlink1
+lrwxrwxrwx 1 maazil maazil    8 Dec  5 22:31 copysoftlink -> softlink
+-rw-rw-r-- 7 maazil maazil   22 Dec  4 22:04 hardlink2
+drwxr-xr-x 4 maazil maazil 4096 Dec  1 00:06 m1
+lrwxrwxrwx 1 maazil maazil    9 Dec  5 22:18 softlink -> hardlink2
+
+
+maazil@maazil-virtual-machine:~/Desktop$ ln -s msoftlinkfolder copymsoftlinkfolder 
+maazil@maazil-virtual-machine:~/Desktop$ ls -i
+2493453 copyhardlink1        2493431 copysoftlink     2501362 softlink
+2493253 copymsoftlink        2501367 msoftlink        2491637 softlink2
+2501370 copymsoftlinkfolder  2493377 msoftlinkfolder
+maazil@maazil-virtual-machine:~/Desktop$ ls -l
+total 4
+-rw-rw-r-- 7 maazil maazil 22 Dec  4 22:04 copyhardlink1
+lrwxrwxrwx 1 maazil maazil  9 Dec  5 22:38 copymsoftlink -> msoftlink
+lrwxrwxrwx 1 maazil maazil 15 Dec  5 22:48 copymsoftlinkfolder -> msoftlinkfolder
+lrwxrwxrwx 1 maazil maazil  8 Dec  5 22:35 copysoftlink -> softlink
+lrwxrwxrwx 1 maazil maazil 12 Dec  5 22:37 msoftlink -> copyhardlink
+lrwxrwxrwx 1 maazil maazil  2 Dec  5 22:25 msoftlinkfolder -> m1
+lrwxrwxrwx 1 maazil maazil 12 Dec  5 22:34 softlink -> copyhardlink
+lrwxrwxrwx 1 maazil maazil  9 Dec  5 22:20 softlink2 -> hardlink2
