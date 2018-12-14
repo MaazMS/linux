@@ -1,0 +1,19 @@
+maazil@maazil-VirtualBox:~/Desktop$ touch new_file          // create new file .
+maazil@maazil-VirtualBox:~$ touch new_file2 new_file3	      // create multiple files .
+
+Note:check timestamp  of files 
+maazil@maazil-VirtualBox:~/Desktop$ ls -l                         
+total 4
+drwxrwxr-x 2 maazil maazil 4096 Dec 14 20:13 'Linux basic command'
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:12  new_file				          //  timestamp  Dec 14 20:12
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:16  new_file2					        //  timestamp  Dec 14 20:16
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:16  new_file3		              //  timestamp  Dec 14 20:16 
+
+note: change all files for current time .
+maazil@maazil-VirtualBox:~$ touch new_file new_file2 new_file3	
+maazil@maazil-VirtualBox:~/Desktop$ ls -l
+total 4
+drwxrwxr-x 2 maazil maazil 4096 Dec 14 20:13 'Linux basic command'
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:19  new_file                   //  timestamp    Dec 14 20:19      
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:19  new_file2                  //  timestamp    Dec 14 20:19 
+-rw-r--r-- 1 maazil maazil    0 Dec 14 20:19  new_file3                  //  timestamp    Dec 14 20:19 
